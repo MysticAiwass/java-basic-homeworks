@@ -28,7 +28,7 @@ public class HomeWorkLesson3 {
     }
 
     private static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
-        if (increment){
+        if (increment) {
             System.out.println(initValue + delta);
         } else {
             System.out.println(initValue - delta);
@@ -38,7 +38,7 @@ public class HomeWorkLesson3 {
     private static void compareNumbers() {
         int a = (int) (Math.random() * 101);
         int b = (int) (Math.random() * 101);
-        
+
         if (a >= b) {
             System.out.println("a >= b");
         } else {
@@ -50,7 +50,7 @@ public class HomeWorkLesson3 {
         int date = (int) (Math.random() * 101);
         if (date <= 10) {
             System.out.println("Красный");
-        } else if (date > 10 && date <= 20) {
+        } else if (date <= 20) {
             System.out.println("Жёлтый");
         } else {
             System.out.println("Зеленый");

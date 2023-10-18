@@ -14,18 +14,12 @@ public class HomeWorkLessonPart1 {
 
         System.out.println("Введите строку для печати: ");
         printString(generateNumber(1, 9), scanner.nextLine());
-
-
         printSum(array);
-
         fillingTheArray(generateNumber(1, 9), array);
         System.out.println("Массив заполнен " + Arrays.toString(array));
-
         increaseArrayElementsByNumber(generateNumber(1, 9), array);
         System.out.println("Элементы массива увеличины " + Arrays.toString(array));
-
         compareArraySums(array2);
-
     }
 
 //    Реализуйте метод, принимающий в качестве аргументов целое число и строку, и печатающий в
@@ -79,7 +73,7 @@ public class HomeWorkLessonPart1 {
 
         for (int i = 0; i < array.length; i++) {
 
-            if (i < Math.ceil((double) array.length / 2)) {
+            if (i < array.length / 2) {
                 sumOne = sumOne + array[i];
             } else {
                 sumTwo = sumTwo + array[i];
@@ -88,9 +82,10 @@ public class HomeWorkLessonPart1 {
 
          if (sumOne > sumTwo){
              System.out.println("Сумма первой половины больше: " + sumOne);
-         } else {
+         } else if (sumOne < sumTwo){
              System.out.println("Сумма второй половины больше: " + sumTwo);
+         } else {
+             System.out.println("Cумма половин массива равны " + sumOne);
          }
     }
 }
-

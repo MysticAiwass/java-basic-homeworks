@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.homeworkLesson3;
+package ru.aiwass.javaBasic.homeworks.moduleOne;
 
 public class MethodsForWorkingOnHomework {
     public static void printTwoDimensionalArray(int[][] array) {

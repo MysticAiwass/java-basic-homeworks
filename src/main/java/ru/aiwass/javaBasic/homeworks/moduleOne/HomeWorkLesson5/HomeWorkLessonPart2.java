@@ -5,28 +5,28 @@ import java.util.Arrays;
 public class HomeWorkLessonPart2 {
     public static void main(String[] args) {
 
-        int[] array1 = new int[]{1, 2, 3};
-        int[] array2 = new int[]{2, 3, 5, 7, 8, 10};
-        int[] array3 = new int[]{1, 1, 1, 1, 1, 0, 0};
-        int[] array4 = new int[]{5, 4, 3, 2, 1, 1, 0};
-        int[] array5 = new int[0];
-        int[] array6 = new int[]{1, 1, 1, 1, 1, 1, 5};
-        int[] array7 = new int[]{5, 3, 4, -2};
-
+        int[] ascendingArray = new int[]{1, 2, 3};
+        int[] array1 = new int[]{2, 3, 5, 7, 8, 10};
+        int[] array2 = new int[]{1, 1, 1, 1, 1, 0, 0};
+        int[] descendingArray = new int[]{5, 4, 3, 2, 1, 1, 0};
+        int[] emptyArray = new int[0];
+        int[] array3 = new int[]{1, 1, 1, 1, 1, 1, 5};
+        int[] array4 = new int[]{5, 3, 4, -2};
+        int[] unsortedArray = new int[]{4, 6, 1, 9, 0, 3, -10};
 
         System.out.println("Сумма элементов входящих массивов " +
                 Arrays.toString(sumElementsOfIncomingArrays(array1, array2, array3)));
 
         System.out.println("Реверсив массива " + Arrays.toString(reverseArray(array2)));
 
-        System.out.println(checkDescOrder(array4));
 
+        System.out.println(checkArrayOrder(ascendingArray).message);
+        System.out.println(checkArrayOrder(descendingArray).message);
+        System.out.println(checkArrayOrder(unsortedArray).message);
+        System.out.println(checkArrayOrder(emptyArray).message);
 
-        System.out.println(checkAscOrder(array1));
-
-
-        System.out.println(searchDot(array6));
-        System.out.println(searchDot(array7));
+        System.out.println(searchDot(array3));
+        System.out.println(searchDot(array4));
 
 
     }
@@ -36,7 +36,7 @@ public class HomeWorkLessonPart2 {
 
     private static int[] sumElementsOfIncomingArrays(int[]... arrays) {
 
-        int[] sumElementAllArrays = new int[maxLengthArray(arrays)];
+        int[] sumElementAllArrays = new int[getMaxArrayLength(arrays)];
 
         for (int[] array : arrays) {
             for (int i = 0; i < array.length; i++) {
@@ -47,7 +47,7 @@ public class HomeWorkLessonPart2 {
     }
 
 
-    private static int maxLengthArray(int[]... arrays) {
+    private static int getMaxArrayLength(int[]... arrays) {
         int maxLength = 0;
         for (int[] array : arrays) {
             maxLength = Math.max(maxLength, array.length);
@@ -88,43 +88,48 @@ public class HomeWorkLessonPart2 {
 //    Реализуйте метод, проверяющий что все элементы массива идут в порядке убывания или
 //    возрастания (по выбору пользователя).
 
-    private static boolean checkAscOrder(int[] array) {
+    private static ArrayAssortment checkArrayOrder(int[] array) {
 
         if (array.length == 0) {
-            throw new RuntimeException("Ваш массив пуст");
+            return ArrayAssortment.EMPTY;
         }
 
-        boolean result = true;
+        boolean ascending = true;
+        boolean descending = true;
+
         int start = array[0];
+
         for (int i = 1; i < array.length; i++) {
-            if (start <= array[i]) {
+            if (start > array[i]) {
                 start = array[i];
-            } else {
-                result = false;
-                break;
+                ascending = false;
+            } else if (start < array[i]) {
+                start = array[i];
+                descending = false;
             }
         }
-        return result;
+
+        if (descending) {
+            return ArrayAssortment.DESCENDING;
+        } else if (ascending) {
+            return ArrayAssortment.ASCENDING;
+        } else {
+            return ArrayAssortment.UNSORTED;
+        }
     }
 
+    enum ArrayAssortment {
+        ASCENDING("Возрастающий массив"),
+        DESCENDING("Убывающий массив"),
+        UNSORTED("Несортированнный массив"),
+        EMPTY("Пустой массив");
 
-    private static boolean checkDescOrder(int[] array) {
-
-        if (array.length == 0) {
-            throw new RuntimeException("Ваш массив пуст");
+        ArrayAssortment(String massage) {
+            this.message = massage;
         }
 
-        boolean result = true;
-        int start = array[0];
-        for (int i = 1; i < array.length; i++) {
-            if (start >= array[i]) {
-                start = array[i];
-            } else {
-                result = false;
-                break;
-            }
-        }
-        return result;
+        private String message;
+
 
     }
 
@@ -132,11 +137,14 @@ public class HomeWorkLessonPart2 {
 //    Пример: { 1 2 3 4 } => { 4 3 2 1 }
 
     private static int[] reverseArray(int[] array) {
-        int[] reverseArray = new int[array.length];
-        for (int i = array.length - 1, j = 0; i >= 0; i--) {
-            reverseArray[j] = array[i];
-            j++;
+
+        int temp;
+        for (int i = 0, j = array.length - 1; i < array.length / 2; i++) {
+            temp = array[j];
+            array[j] = array[i];
+            array[i] = temp;
+            j--;
         }
-        return reverseArray;
+        return array;
     }
 }

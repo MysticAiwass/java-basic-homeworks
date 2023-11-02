@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleOne.HomeworkLesson10.partOne;
+package ru.aiwass.javaBasic.homeworks.moduleTwo.HomeworkLesson10.partOne;
 
 import java.time.LocalDate;
 
@@ -28,7 +28,7 @@ public class User {
 //    ФИО: фамилия имя отчество
 //    Год рождения: год рождения
 //    e-mail: email
-    public void displayInformationAboutTheUser() {
+    public void displayInformationAboutTheUser () {
         System.out.println("ФИО: " + firstName + " " + lastName + " " + fatherName);
         System.out.println("Год рождения: " + dateOfBirth);
         System.out.println("Email: " + email);

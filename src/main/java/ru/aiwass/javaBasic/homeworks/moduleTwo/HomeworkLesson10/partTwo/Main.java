@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleOne.HomeworkLesson10.partTwo;
+package ru.aiwass.javaBasic.homeworks.moduleTwo.HomeworkLesson10.partTwo;
 
 import java.util.Scanner;
 
@@ -22,24 +22,24 @@ public class Main {
 
                 switch (userAnswer) {
                     case 1:
-                        box.printInfoBox();
+                        box.printInfo();
                         break;
                     case 2:
-                        box.openBox();
+                        box.open();
                         break;
                     case 3:
-                        box.closeBox();
+                        box.close();
                         break;
                     case 4:
                         System.out.println("Введите новый цвет коробки");
-                        String color = scanner.nextLine();
-                        box.setColorBox(color);
+                        box.setColor(scanner.nextLine());
                         break;
                     case 5:
-                        box.removeItemFromBox();
+                        box.removeItem();
                         break;
                     case 6:
-                        box.putAnItemInBox();
+                        System.out.println("Какой предмет вы хотите положить?");
+                        box.putItem(new Item(scanner.nextLine()));
                         break;
                     case 7:
                         callOperations();
@@ -59,6 +59,7 @@ public class Main {
             }
         }
     }
+
     public static void callOperations() {
         System.out.println("Доступные операции с коробкой: \n" +
                 "1 - Узнать характеристики коробки \n" +

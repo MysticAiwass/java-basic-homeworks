@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleOne.HomeWorkLesson5;
+package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson5;
 
 import java.util.Arrays;
 
@@ -14,19 +14,19 @@ public class HomeWorkLessonPart2 {
         int[] array4 = new int[]{5, 3, 4, -2};
         int[] unsortedArray = new int[]{4, 6, 1, 9, 0, 3, -10};
 
-        System.out.println("Сумма элементов входящих массивов " +
-                Arrays.toString(sumElementsOfIncomingArrays(array1, array2, array3)));
+//        System.out.println("Сумма элементов входящих массивов " +
+//                Arrays.toString(sumElementsOfIncomingArrays(array1, array2, array3)));
 
-        System.out.println("Реверсив массива " + Arrays.toString(reverseArray(array2)));
+        System.out.println("Реверсив массива " + Arrays.toString(reverseArray(array1)));
 
 
-        System.out.println(checkArrayOrder(ascendingArray).message);
-        System.out.println(checkArrayOrder(descendingArray).message);
-        System.out.println(checkArrayOrder(unsortedArray).message);
-        System.out.println(checkArrayOrder(emptyArray).message);
-
-        System.out.println(searchDot(array3));
-        System.out.println(searchDot(array4));
+//        System.out.println(checkArrayOrder(ascendingArray).message);
+//        System.out.println(checkArrayOrder(descendingArray).message);
+//        System.out.println(checkArrayOrder(unsortedArray).message);
+//        System.out.println(checkArrayOrder(emptyArray).message);
+//
+//        System.out.println(searchDot(array3));
+//        System.out.println(searchDot(array4));
 
 
     }

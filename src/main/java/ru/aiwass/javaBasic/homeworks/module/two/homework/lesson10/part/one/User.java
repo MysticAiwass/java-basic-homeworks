@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleTwo.HomeworkLesson10.partOne;
+package ru.aiwass.javaBasic.homeworks.module.two.homework.lesson10.part.one;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleTwo.HomeworkLesson10.partTwo;
+package ru.aiwass.javaBasic.homeworks.module.two.homework.lesson10.part.two;
 
 public class Box {
     // Попробуйте реализовать класс по его описания: объекты класса Коробка должны иметь размеры и цвет. Коробку можно открывать и закрывать.
@@ -83,12 +83,11 @@ public class Box {
 
     public void removeItem() {
         if (isOpen) {
-            if (this.item != null) {
+            if (item != null) {
                 System.out.println("Вы убрали предмет из коробки: " + item.getName());
-                this.item = null;
+                item = null;
             } else {
                 System.out.println("В коробке и так нет предмета");
-
             }
         } else {
             System.out.println("Коробка закрыта. Вы не видите, есть ли предмет в коробке \n" +

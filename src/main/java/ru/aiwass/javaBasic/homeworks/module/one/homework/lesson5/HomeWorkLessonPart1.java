@@ -1,9 +1,9 @@
-package ru.aiwass.javaBasic.homeworks.moduleOne.HomeWorkLesson5;
+package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson5;
+
+import ru.aiwass.javaBasic.homeworks.module.one.MethodsForWorkingOnHomework;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
-import static ru.aiwass.javaBasic.homeworks.moduleOne.MethodsForWorkingOnHomework.generateNumber;
 
 public class HomeWorkLessonPart1 {
     public static void main(String[] args) {
@@ -13,11 +13,11 @@ public class HomeWorkLessonPart1 {
         int[] array2 = {20, 2, 5, 89, 12, 7, 1, 4, 2, 3, 6, 4, 8, 32, 5, 6, 23};
 
         System.out.println("Введите строку для печати: ");
-        printString(generateNumber(1, 9), scanner.nextLine());
+        printString(MethodsForWorkingOnHomework.generateNumber(1, 9), scanner.nextLine());
         printSum(array);
-        fillingTheArray(generateNumber(1, 9), array);
+        fillingTheArray(MethodsForWorkingOnHomework.generateNumber(1, 9), array);
         System.out.println("Массив заполнен " + Arrays.toString(array));
-        increaseArrayElementsByNumber(generateNumber(1, 9), array);
+        increaseArrayElementsByNumber(MethodsForWorkingOnHomework.generateNumber(1, 9), array);
         System.out.println("Элементы массива увеличины " + Arrays.toString(array));
         compareArraySums(array2);
     }

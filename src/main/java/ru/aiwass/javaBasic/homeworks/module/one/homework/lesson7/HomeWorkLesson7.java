@@ -1,9 +1,26 @@
-package ru.aiwass.javaBasic.homeworks.moduleOne.HomeWorkLesson7;
+package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson7;
 
 
-import static ru.aiwass.javaBasic.homeworks.moduleOne.MethodsForWorkingOnHomework.printTwoDimensionalArray;
+import ru.aiwass.javaBasic.homeworks.module.one.MethodsForWorkingOnHomework;
 
 public class HomeWorkLesson7 {
+
+    public static void main(String[] args) {
+        int[][] array = new int[4][4];
+        // - это вот объявление двуменого массива с уже заданное длиной.
+
+        // А еще его можно написать вот так:
+
+        int[][] array1 = new int[][]
+                {
+                        {0, 0, 0, 0},
+                        {0, 0, 0, 0},
+                        {0, 0, 0, 0},
+                        {0, 0, 0, 0}
+                };
+
+// дальше перейдем в paint -
+    }
 
 //    Реализовать метод sumOfPositiveElements(..), принимающий в качестве аргумента целочисленный двумерный массив,
 //    метод должен посчитать и вернуть сумму всех элементов массива, которые больше 0;
@@ -45,7 +62,7 @@ public class HomeWorkLesson7 {
                 }
             }
         }
-        printTwoDimensionalArray(array);
+        MethodsForWorkingOnHomework.printTwoDimensionalArray(array);
     }
 
 //Реализовать метод findMax(int[][] array) который должен найти и вернуть максимальный элемент массива;
@@ -66,14 +83,16 @@ public class HomeWorkLesson7 {
 // если второй строки не существует, то в качестве результата необходимо вернуть -1
 
     public static int calculateTheSumOfTheSecondRowOfTheArray(int[][] array) {
-        int sumElements = 0;
-        if (array.length <= 1) {
+        int sumElements = 0; // - это переменная, которая записывает сумму второй строки
+        if (array.length <= 1) { //создаешь условие, где говоришь, что если длина массива меньше или равна 0,
+            // то мы записываем в сумму -1 и
             sumElements = -1;
-        } else {
-            for (int i = 0; i < array[1].length; i++) {
-                sumElements += array[1][i];
+        } else { // но если длина массива больше 1, то мы берем второю строку и суммируем ее элементы
+            for (int i = 0; i < array[1].length; i++) { // вот здесь проходимся по второй строке, помни нумерация с 0
+                sumElements += array[1][i]; // собственно прибавляем
             }
         }
-        return sumElements;
+        return sumElements; // возвращаем сумму
     }
 }
+

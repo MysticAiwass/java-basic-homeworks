@@ -1,9 +1,9 @@
-package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson7;
+package ru.aiwass.javaBasic.homeworks.moduleone.lesson7;
 
 
-import ru.aiwass.javaBasic.homeworks.module.one.MethodsForWorkingOnHomework;
+import ru.aiwass.javaBasic.homeworks.moduleone.MethodsForWorkingOnHomework;
 
-public class HomeWorkLesson7 {
+public class DimensionalArray {
 
     public static void main(String[] args) {
         int[][] array = new int[4][4];

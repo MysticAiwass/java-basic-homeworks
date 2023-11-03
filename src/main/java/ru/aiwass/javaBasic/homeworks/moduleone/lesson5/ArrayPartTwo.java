@@ -1,8 +1,8 @@
-package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson5;
+package ru.aiwass.javaBasic.homeworks.moduleone.lesson5;
 
 import java.util.Arrays;
 
-public class HomeWorkLessonPart2 {
+public class ArrayPartTwo {
     public static void main(String[] args) {
 
         int[] ascendingArray = new int[]{1, 2, 3};

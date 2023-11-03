@@ -1,11 +1,11 @@
-package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson5;
+package ru.aiwass.javaBasic.homeworks.moduleone.lesson5;
 
-import ru.aiwass.javaBasic.homeworks.module.one.MethodsForWorkingOnHomework;
+import ru.aiwass.javaBasic.homeworks.moduleone.MethodsForWorkingOnHomework;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class HomeWorkLessonPart1 {
+public class ArrayPartOne {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

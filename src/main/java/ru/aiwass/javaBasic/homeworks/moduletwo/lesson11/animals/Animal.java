@@ -26,7 +26,7 @@ public abstract class Animal {
         }
 
         if (runningSpeed > 0) {
-            System.out.println(name + " пробегает " + distance + "м за " +  distance / runningSpeed + " секунд");
+            System.out.println(name + " пробегает " + distance + "м за " +  distance / runningSpeed + " сек");
             decreaseEndurance(distance);
         }
 
@@ -44,7 +44,7 @@ public abstract class Animal {
 
         if (swimmingSpeed > 0) {
             int time = distance / swimmingSpeed;
-            System.out.println(name + " проплывает " + distance + " м за " + time + " секунд");
+            System.out.println(name + " проплывает " + distance + " м за " + time + " сек");
             decreaseEndurance(enduranceRequired);
         }
 

@@ -6,10 +6,10 @@ import ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals.Horse;
 
 public class Main {
     public static void main(String[] args) {
-        Dog dog = new Dog("Lolik", 15, 12, 400);
-        Cat cat = new Cat("Murka", 10, 300);
-        Horse horse = new Horse("Spirt", 50, 30, 1000);
-        Dog dogBobik = new Dog("Bobik", 0, 0, 400);
+        Dog dog = new Dog("Лолик", 15, 12, 400);
+        Cat cat = new Cat("Анатолик", 10, 300);
+        Horse horse = new Horse("Жорик", 50, 30, 1000);
+        Dog dogBobik = new Dog("Бобик", 0, 0, 400);
 
         dog.info();
         dog.run(200);

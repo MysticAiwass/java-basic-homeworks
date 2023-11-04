@@ -18,36 +18,44 @@ public abstract class Animal {
         System.out.println(name + " имеет выносливость " + endurance + " условных единиц");
     }
 
-    public void run(int distance) {
+    public int run(int distance) {
 
         if (endurance < distance){
-            System.out.println("Затраченное время: -1. "  + name + " устал(а) и не может проплыть такое расстояние");
-            return;
+            System.out.println(name + " устал(а) и не может пробежать такое расстояние");
+            return -1;
         }
 
         if (runningSpeed > 0) {
             System.out.println(name + " пробегает " + distance + "м за " +  distance / runningSpeed + " сек");
-            decreaseEndurance(distance);
+            endurance = endurance - distance;
+            return distance/runningSpeed;
         }
 
+        System.out.println("Скорость не может быть меньше нуля");
+        return -1;
     }
 
-    public void swim(int distance) {
+    public int swim(int distance) {
         int enduranceRequired = (this instanceof Dog) ? 2 * distance : (this instanceof Horse) ? 4 * distance : 0;
 
         if (this instanceof Cat) {
             System.out.println(name + " не умеет плавать.");
+            return -1;
         }
+
         if (endurance < enduranceRequired) {
-            System.out.println("Затраченное время: -1. "  + name + " устал(а) и не может проплыть такое расстояние");
+            System.out.println(name + " устал(а) и не может проплыть такое расстояние");
+            return -1;
         }
 
         if (swimmingSpeed > 0) {
             int time = distance / swimmingSpeed;
             System.out.println(name + " проплывает " + distance + " м за " + time + " сек");
             decreaseEndurance(enduranceRequired);
+            return time;
         }
-
+        System.out.println("Скорость не может быть меньше нуля");
+        return -1;
     }
 
     protected void decreaseEndurance(int value) {

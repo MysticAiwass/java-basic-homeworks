@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.module.two.homework.lesson10.part.two;
+package ru.aiwass.javaBasic.homeworks.moduletwo.lesson10.parttwo;
 
 public class Box {
     // Попробуйте реализовать класс по его описания: объекты класса Коробка должны иметь размеры и цвет. Коробку можно открывать и закрывать.

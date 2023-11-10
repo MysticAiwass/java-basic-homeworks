@@ -1,8 +1,8 @@
-package ru.aiwass.javaBasic.homeworks.module.one.homework.lesson3;
+package ru.aiwass.javaBasic.homeworks.moduleone.lesson3;
 
 import java.util.Scanner;
 
-public class HomeWorkLesson3 {
+public class IntroductionToJava {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите цифру от 1 до 5 включительно. Методы:\n" +

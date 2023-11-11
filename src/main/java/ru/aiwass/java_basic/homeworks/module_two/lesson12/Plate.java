@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduletwo.lesson12;
+package ru.aiwass.java_basic.homeworks.module_two.lesson12;
 
 public class Plate {
     private final int maximumAmountOfFood;
@@ -18,7 +18,8 @@ public class Plate {
     }
 
     public boolean decreaseFood(int amount) {
-        if (currentAmountOfFood >= amount) {
+
+        if (currentAmountOfFood >= amount && amount > 0) {
             currentAmountOfFood -= amount;
             return true;
         }

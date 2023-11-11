@@ -1,6 +1,6 @@
-package ru.aiwass.javaBasic.homeworks.moduleone.lesson5;
+package ru.aiwass.java_basic.homeworks.module_one.lesson5;
 
-import ru.aiwass.javaBasic.homeworks.moduleone.MethodsForWorkingOnHomework;
+import ru.aiwass.java_basic.homeworks.module_one.MethodsForWorkingOnHomework;
 
 import java.util.Arrays;
 import java.util.Scanner;

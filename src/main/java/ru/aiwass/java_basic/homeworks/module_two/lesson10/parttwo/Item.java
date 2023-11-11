@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduletwo.lesson10.parttwo;
+package ru.aiwass.java_basic.homeworks.module_two.lesson10.parttwo;
 
 public class Item {
     private String name;

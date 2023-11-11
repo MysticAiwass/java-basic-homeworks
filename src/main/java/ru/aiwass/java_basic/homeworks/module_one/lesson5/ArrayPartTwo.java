@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleone.lesson5;
+package ru.aiwass.java_basic.homeworks.module_one.lesson5;
 
 import java.util.Arrays;
 

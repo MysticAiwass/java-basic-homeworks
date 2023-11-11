@@ -1,9 +1,8 @@
-package ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals;
+package ru.aiwass.java_basic.homeworks.module_two.lesson11.animals;
 
-public class Dog extends Animal {
-
-    public Dog(String name, int runningSpeed, int swimmingSpeed, int endurance) {
-        super(name, runningSpeed, swimmingSpeed, endurance, 2);
+public class Horse extends Animal {
+    public Horse(String name, int runningSpeed, int swimmingSpeed, int endurance) {
+        super(name, runningSpeed, swimmingSpeed, endurance, 4);
     }
 
     @Override

@@ -1,8 +1,8 @@
-package ru.aiwass.javaBasic.homeworks.moduletwo.lesson11;
+package ru.aiwass.java_basic.homeworks.module_two.lesson11;
 
-import ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals.Cat;
-import ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals.Dog;
-import ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals.Horse;
+import ru.aiwass.java_basic.homeworks.module_two.lesson11.animals.Cat;
+import ru.aiwass.java_basic.homeworks.module_two.lesson11.animals.Dog;
+import ru.aiwass.java_basic.homeworks.module_two.lesson11.animals.Horse;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package ru.aiwass.javaBasic.homeworks.moduleone.lesson7;
+package ru.aiwass.java_basic.homeworks.module_one.lesson7;
 
 
-import ru.aiwass.javaBasic.homeworks.moduleone.MethodsForWorkingOnHomework;
+import ru.aiwass.java_basic.homeworks.module_one.MethodsForWorkingOnHomework;
 
 public class DimensionalArray {
 

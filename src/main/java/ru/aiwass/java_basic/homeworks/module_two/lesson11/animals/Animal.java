@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals;
+package ru.aiwass.java_basic.homeworks.module_two.lesson11.animals;
 
 public abstract class Animal {
     //У каждого животного есть имя, скорость бега и плавания (м/с), и выносливость (измеряется в условных единицах)

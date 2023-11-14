@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduletwo.lesson11.animals;
+package ru.aiwass.java_basic.homeworks.module_two.lesson11.animals;
 
 public class Cat extends Animal {
 

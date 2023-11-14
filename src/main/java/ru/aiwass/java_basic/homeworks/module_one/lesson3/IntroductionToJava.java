@@ -1,4 +1,4 @@
-package ru.aiwass.javaBasic.homeworks.moduleone.lesson3;
+package ru.aiwass.java_basic.homeworks.module_one.lesson3;
 
 import java.util.Scanner;
 

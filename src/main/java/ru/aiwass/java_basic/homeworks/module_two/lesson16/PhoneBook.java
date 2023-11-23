@@ -35,4 +35,11 @@ public class PhoneBook {
         }
         return false;
     }
+
+    public void printPhoneBook() {
+        for (var entry : phoneBook.entrySet()) {
+            System.out.println("ФИО: " + entry.getKey() +
+                    ", Номер телефона: " + entry.getValue());
+        }
+    }
 }

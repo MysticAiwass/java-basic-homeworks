@@ -18,5 +18,7 @@ public class Main {
         System.out.println(phoneBook.find("Никита"));
         System.out.println(phoneBook.containsPhoneNumber("+79111234567"));
         System.out.println(phoneBook.containsPhoneNumber("+89111234567"));
+
+        phoneBook.printPhoneBook();
     }
 }

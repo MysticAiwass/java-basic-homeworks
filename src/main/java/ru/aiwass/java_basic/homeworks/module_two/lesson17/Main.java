@@ -3,31 +3,35 @@ package ru.aiwass.java_basic.homeworks.module_two.lesson17;
 public class Main {
     public static void main(String[] args) {
         MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
-        myLinkedList.addLast(1);
-        myLinkedList.addLast(2);
-        myLinkedList.addLast(6);
-
+        for (int i = 1; i < 7; i++) {
+            myLinkedList.addLast(i);
+        }
         System.out.println("ЛИСТ");
-        System.out.println(myLinkedList);
-        myLinkedList.remove(1);
-        System.out.println(myLinkedList);
-        System.out.println(myLinkedList.size());
+        System.out.println("Добавили элементы в лист: " + myLinkedList);
+
+        for (int i = myLinkedList.size() - 1; i >= 0; i--) {
+            myLinkedList.remove(i);
+        }
+        System.out.println("Удалили элементы из листа: " + myLinkedList);
 
         System.out.println("--------------------------------");
         System.out.println("ОЧЕРЕДЬ");
 
         // первым пришел - первый вышел
         MyQueue<Integer> myQueue = new MyQueue<>();
-        myQueue.offer(1); //первая вошла
-        myQueue.offer(2);
-        myQueue.offer(3);
-        myQueue.offer(4);
-        myQueue.offer(5);
 
-        System.out.println(myQueue);
-        System.out.println(myQueue.poll()); // вывод 1
-        System.out.println(myQueue.poll()); //вывод 2
-        System.out.println(myQueue);
+        for (int i = 1; i < 5; i++) {
+            myQueue.offer(i);
+        }
+
+        System.out.println("Добавили элементы в очередь: " + myQueue);
+
+        for (int i = myQueue.size() - 1; i >= 0; i--) {
+            System.out.println(myQueue.poll());
+        }
+
+        System.out.println("Забрали элементы из очереди: " + myQueue);
+
 
         System.out.println("--------------------------------");
         System.out.println("СТЕК");
@@ -37,13 +41,14 @@ public class Main {
         myStack.push("Маша");
         myStack.push("Катя");
         myStack.push("Оля");
-        myStack.push("Мася");// последняя
+        myStack.push("Мася");//
 
-        System.out.println(myStack);
-        System.out.println(myStack.pop()); // вывод Мася
-        System.out.println(myStack.pop());// вывод Оля
-        System.out.println(myStack);
+        System.out.println("Добавили элементы в стек: " + myStack);
+
+        while (myStack.size() > 0) {
+            System.out.println(myStack.pop());
+        }
+
+        System.out.println("Забрали элементы из стека: " + myStack);
     }
-
-
 }

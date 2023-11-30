@@ -7,7 +7,7 @@ public class MyLinkedList<T> {
     private int count = 0;
 
     public void addFirst(T data) {
-        Item<T> item = new Item<T>(null, data, first);
+        Item<T> item = new Item<>(null, data, first);
         if (first == null) {
             first = last = item;
         } else {
@@ -18,7 +18,7 @@ public class MyLinkedList<T> {
     }
 
     public void addLast(T data) {
-        Item<T> item = new Item<T>(last, data, null);
+        Item<T> item = new Item<>(last, data, null);
         if (last == null) {
             last = first = item;
         } else {
@@ -77,19 +77,45 @@ public class MyLinkedList<T> {
         return last.value;
     }
 
+//    public void remove(int position) {
+//        if (position < 0 || position > count) {
+//            throw new IllegalArgumentException("Invalid position");
+//        }
+//
+//        Как-то странно сократила, что код перестал обрабатывать,
+//        если удаляется единственный элемент в списке
+
+//        first = (position == 0) ? first.next : first;
+//
+//        Item<T> prev = getItemAtPosition(position - 1);
+//        Item<T> current = prev.next;
+//        Item<T> next = current.next;
+//
+//        prev.next = next;
+//        last = (next == null) ? prev : last;
+//
+//        count--;
+//    }
+
     public void remove(int position) {
-        if (position < 0 || position > count) {
-            return;
+        if (position < 0 || position >= count) {
+            throw new IllegalArgumentException("Invalid position");
         }
-        first = (position == 0) ? first.next : first;
 
-        Item<T> prev = getItemAtPosition(position - 1);
-        Item<T> current = prev.next;
-        Item<T> next = current.next;
+        if (position == 0) {
+            first = first.next;
+            if (first == null) {
+                // Если удаляется единственный элемент в списке
+                last = null;
+            }
+        } else {
+            Item<T> prev = getItemAtPosition(position - 1);
+            Item<T> current = prev.next;
+            Item<T> next = current.next;
 
-        prev.next = next;
-        last = (next == null) ? prev : last;
-
+            prev.next = next;
+            last = (next == null) ? prev : last;
+        }
         count--;
     }
 

@@ -14,35 +14,17 @@ public class PhoneBook {
     }
 
 
-//    Про get немного не поняла.Т.е. проверять точное совпадение ключа query в телефонной книге,
-//    и если ввели подстроку,то он ничего не выведет?
-
-//    public void find(String query) {
-//        if (phoneBook!=null) {
-//            System.out.println(query + ": " + phoneBook.get(query));
-//        } else {
-//            System.out.println("Номер не найден для запроса: " + query);
-//        }
-//    }
-
-//    Убрала лист и сделала просто вывод на экран - фио-номер телефона
-//    Во втором случае, будет искать содержит ли ключ введенное значение и выведет на экран все совпадения.
-//    Добавила вывод, если номер не найден.
-
-    public void find(String query) {
-        boolean found = false;
+    public Map<String, Set<String>> find(String query) {
+        Map<String, Set<String>> phoneNumbers = new HashMap<>();
 
         for (var entry : phoneBook.entrySet()) {
             String name = entry.getKey();
             if (name.contains(query)) {
-                System.out.println(entry.getKey() + ": " + entry.getValue());
-                found = true;
+                phoneNumbers.put(name, phoneBook.get(name));
             }
         }
 
-        if (!found) {
-            System.out.println("Номер не найден для запроса: " + query);
-        }
+        return phoneNumbers.isEmpty() ? Collections.emptyMap() : phoneNumbers;
     }
 
     public boolean containsPhoneNumber(String phoneNumber) {
@@ -60,4 +42,5 @@ public class PhoneBook {
                     ", Номер телефона: " + entry.getValue());
         }
     }
+
 }

@@ -12,9 +12,11 @@ public class Main {
         phoneBook.add("Иванов Генадий Викторович", "+79222256569");
         phoneBook.add("Иванов Иван Иванович", "+789635797645");
 
-        phoneBook.find("Иванов");
-        phoneBook.find("Козлова Мария Дмитриевна");
-        phoneBook.find("Илья");
+        System.out.println( phoneBook.find("Иванов"));
+        System.out.println(phoneBook.find("Козлова Мария Дмитриевна"));
+        System.out.println(phoneBook.find("Илья"));
+
+
         System.out.println(phoneBook.containsPhoneNumber("+79111234567"));
         System.out.println(phoneBook.containsPhoneNumber("+89111234567"));
 

@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;
 public class PracticeIO {
+
     public static void main(String[] args) {
 
         Path path = Paths.get("C:\\Users\\evawh\\IdeaProjects\\java-basic-homeworks");

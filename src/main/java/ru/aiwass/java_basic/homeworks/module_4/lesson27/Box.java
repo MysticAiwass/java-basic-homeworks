@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Box<T extends Fruit> {
-    List<T> fruits;
+
+    private List<T> fruits;
 
     public Box() {
         this.fruits = new ArrayList<>();
@@ -28,7 +29,12 @@ public class Box<T extends Fruit> {
     }
 
     public void transferFruits(Box<? super T> anotherBox) {
-        anotherBox.fruits.addAll(this.fruits);
-        this.fruits.clear();
+        if (anotherBox != null && anotherBox != this) {
+            anotherBox.fruits.addAll(this.fruits);
+            this.fruits.clear();
+        } else {
+            throw new IllegalArgumentException ("Недопустимый аргумент: Box не может быть равен null " +
+                    "или совпадать с исходным ящиком.");
+        }
     }
 }

@@ -43,5 +43,11 @@ public class Main {
 
         orangeBox.transferFruits(fruitBox);
         System.out.println(orangeBox.calculateWeight());
+
+//        Передача аргумента this
+//        orangeBox.transferFruits(orangeBox);
+
+//        Передача аргумента null
+        orangeBox.transferFruits(null);
     }
 }
